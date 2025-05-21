@@ -13,7 +13,12 @@ SECRET_KEY = 'django-insecure-3(@vqx_dx-u#kbaaw-2p37w$nb%lgpu6%z8&k_j40$x7h9%+o(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'site-0yud.onrender.com',  # Ваш домен на Render
+    'localhost',
+    '127.0.0.1',
+    'ping.uptimerobot.com'   # Для UptimeRobot (без кавычек в конце строки!)
+]
 
 
 # Application definition
@@ -125,3 +130,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://site-0yud.onrender.com',
+]
